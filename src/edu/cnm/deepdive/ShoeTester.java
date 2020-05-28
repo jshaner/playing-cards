@@ -13,5 +13,7 @@ public class ShoeTester {
     shoe.shuffle(rng);
     System.out.println(Arrays.toString(shoe.getCards()));
 
+
+
   }
 }
