@@ -8,8 +8,8 @@ public class Card {  //public class Card extends Object {}
   /**
    * Creates an instance of {@code Card} with the specified {@link Suit} and {@link Rank}.
    *
-   * @param suit selected suit
-   * @param rank selected rank
+   * @param suit selected suit.
+   * @param rank selected rank.
    */
   public Card(Suit suit, Rank rank) {
     this.suit = suit;
