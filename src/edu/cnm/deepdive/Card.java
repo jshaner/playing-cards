@@ -1,6 +1,6 @@
 package edu.cnm.deepdive;
 
-public class Card {  //public class Card extends Object {}
+public class Card implements Comparable<Card> {  //public class Card extends Object {}
 
   private final Suit suit;
   private final Rank rank;
@@ -29,5 +29,15 @@ public class Card {  //public class Card extends Object {}
     return rank.symbol() + suit.symbol();
     //return super.toString(); //invoke toString method from the super class and return that object, but we want the symbol for the card, not Card@91161c7, etc
 
+  }
+
+  @Override
+  public int compareTo(Card other) {
+    int comparison = suit.compareTo(other.suit);
+    if (comparison == 0) {
+      comparison = rank.compareTo(other.rank);
+
+    }
+    return comparison;
   }
 }
