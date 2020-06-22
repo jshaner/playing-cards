@@ -6,7 +6,17 @@ package edu.cnm.deepdive;
  */
 public enum Suit {
 
-  CLUBS, DIAMONDS, HEARTS, SPADES;
+  CLUBS(Color.BLACK),
+  DIAMONDS(Color.RED),
+  HEARTS(Color.RED),
+  SPADES(Color.BLACK);
+
+  private final Color color;
+
+  private Suit(Color color) {
+    this.color = color;
+  }
+
 // can use html tags
   /**
    * Returns the <em>Unicode</em> symbol for the current instance.
@@ -30,4 +40,7 @@ public enum Suit {
 
   }
 
+  public Color getColor() {
+    return color;
+  }
 }
